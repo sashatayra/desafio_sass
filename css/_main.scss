@@ -1,0 +1,175 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #000;
+	font-family: 'Nunito', sans-serif;
+	background-image: url(../assets/1539.jpg);
+	background-size: contain;
+	background-blend-mode: hard-light;
+    #containerGrid{
+        background-image: url(../assets/1539.jpg);
+        background-size: contain;
+        background-blend-mode: hard-light;
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "containerFlex"
+        "contenido"
+        "fotos"
+        "footer"
+        "arriba"
+    }
+}
+   
+.header{
+        display: flex;
+        justify-content: space-around;
+    .menu{
+        display: flex;
+        background-color: #000;
+        color: #fff;
+        position:sticky;
+        top: 0;
+        width: 100%;
+        text-align: center;
+        justify-content: space-around;
+        list-style-type: none;
+        text-decoration: none;
+        grid-area: header;
+    }
+
+}    
+
+.containerLogo{
+	display: flex;
+	justify-content:center;
+	padding: 20px 0;
+    .imagenLogo{
+        border-radius: 40%;
+        animation-duration: 1.2s;
+        animation-name: aparecer;
+        animation-iteration-count: 5s;
+        @keyframes aparecer{
+            0% {
+             opacity: 0;
+           }
+           100% {
+             opacity: 1;
+           }
+        }
+    }
+}
+
+.contenido{
+	grid-area: contenido;
+    #containerGridDos{
+        display: grid;
+        grid-template-areas: 
+        "uno dos tres"
+        "cuatro cinco .";
+        @media all and (max-width: 768px){
+            grid-template-areas: 
+            "uno"
+            "dos"
+            "tres"
+            "cuatro"
+            "cinco"
+        }
+    }
+    .items{
+        display: flex;
+        color: #fff;
+        background: radial-gradient(#ccc, #000);
+        justify-content: center;
+        margin: 5%;
+        padding: 5%;
+        .titulo{
+            font-family: 'Koulen', cursive;
+            font-size: 2rem;
+        }
+        .itemUno{
+            grid-area: uno;
+            margin-left: 1rem;
+        }
+        .itemDos{
+            grid-area: dos;
+            margin-left: 1rem;
+        }
+        .itemTres{
+            grid-area: tres;
+            margin-left: 1rem;
+        }
+        .itemCuatro{
+            grid-area: cuatro;
+            margin-left: 1rem;
+        }
+        
+        .itemCinco{
+            grid-area: cinco;
+            margin-left: 1rem;
+        }
+    }
+}
+
+.fotos{
+	grid-area: fotos;
+	display: flex;
+	justify-content: space-around;
+    @media all and (max-width: 768px){
+        flex-direction: column;
+		justify-content: center;
+		align-items: center;
+    }
+    .imagenUno{
+        height: 25rem;
+        width: 25rem;
+        transition: all 1s;
+        &:hover{
+            height: 30rem;
+	        width: 30rem;
+        }
+    }
+    .imagenDos{
+        height: 25rem;
+        width: 25rem;
+        transition: all 1s;
+        &:hover{
+            height: 30rem;
+	        width: 30rem;
+        }
+    }
+    .imagenTres{
+        height: 25rem;
+        width: 25rem;
+        transition: all 1s;
+        &:hover{
+            height: 30rem;
+	        width: 30rem;
+        }
+    }
+}
+
+.footer{
+	display: flex;
+	margin: 25px;
+	padding: 10px;
+	background-color: #000;
+	color: #fff;
+	justify-content: space-around;
+    opacity: .7;
+	grid-area: footer;
+
+}
+
+.arriba{
+	text-decoration: none;
+	color: blue;
+	margin: 2rem;
+    padding: 1rem;
+	grid-area: arriba;
+}
+   

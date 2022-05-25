@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-family: 'Nunito', sans-serif;
+  background-image: url(../assets/1539.jpg);
+  background-size: contain;
+  background-blend-mode: hard-light;
+}
+
+body #containerGrid {
+  background-image: url(../assets/1539.jpg);
+  background-size: contain;
+  background-blend-mode: hard-light;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header"
+ "containerFlex"
+ "contenido"
+ "fotos"
+ "footer"
+ "arriba";
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #000;
+  color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style-type: none;
+  text-decoration: none;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+}
+
+.containerLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 0;
+}
+
+.containerLogo .imagenLogo {
+  border-radius: 40%;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-name: aparecer;
+          animation-name: aparecer;
+  -webkit-animation-iteration-count: 5s;
+          animation-iteration-count: 5s;
+}
+
+@-webkit-keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.contenido {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: contenido;
+}
+
+.contenido #containerGridDos {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "uno dos tres"
+ "cuatro cinco .";
+}
+
+@media all and (max-width: 768px) {
+  .contenido #containerGridDos {
+        grid-template-areas: "uno"
+ "dos"
+ "tres"
+ "cuatro"
+ "cinco";
+  }
+}
+
+.contenido .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  background: radial-gradient(#ccc, #000);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5%;
+  padding: 5%;
+}
+
+.contenido .items .titulo {
+  font-family: 'Koulen', cursive;
+  font-size: 2rem;
+}
+
+.contenido .items .itemUno {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: uno;
+  margin-left: 1rem;
+}
+
+.contenido .items .itemDos {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: dos;
+  margin-left: 1rem;
+}
+
+.contenido .items .itemTres {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: tres;
+  margin-left: 1rem;
+}
+
+.contenido .items .itemCuatro {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: cuatro;
+  margin-left: 1rem;
+}
+
+.contenido .items .itemCinco {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: cinco;
+  margin-left: 1rem;
+}
+
+.fotos {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: fotos;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media all and (max-width: 768px) {
+  .fotos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.fotos .imagenUno {
+  height: 25rem;
+  width: 25rem;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.fotos .imagenUno:hover {
+  height: 30rem;
+  width: 30rem;
+}
+
+.fotos .imagenDos {
+  height: 25rem;
+  width: 25rem;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.fotos .imagenDos:hover {
+  height: 30rem;
+  width: 30rem;
+}
+
+.fotos .imagenTres {
+  height: 25rem;
+  width: 25rem;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.fotos .imagenTres:hover {
+  height: 30rem;
+  width: 30rem;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 25px;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  opacity: .7;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}
+
+.arriba {
+  text-decoration: none;
+  color: #000;
+  margin: 2rem;
+  padding: 1rem;
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: arriba;
+}
+/*# sourceMappingURL=estilos.css.map */
